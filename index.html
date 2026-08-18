@@ -95,8 +95,6 @@
 .video-info h3 { font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 0.4rem; color: var(--negro); }
 .video-info p { font-size: 0.85rem; color: var(--gris); }
 @media(max-width: 768px) { .videos-grid { grid-template-columns: 1fr; } }
-.video-embed { position: relative; aspect-ratio: 16/9; background: var(--negro); }
-.video-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
 
     /* CONSTRUAPP */
     :root { --app-primary: #2B6CB0; --app-accent: #5FA8D3; --app-bg: #0B1B2B; --app-screen: #0F2A47; }
@@ -287,7 +285,7 @@
     <div class="catalogo-grid">
       <div class="modelo-card reveal">
         <div class="modelo-thumb"><img src="casa-los-pellines-fachada.jpg" alt="Casa Los Pellines - Fachada" onerror="this.parentElement.classList.add('img-error');this.remove()"></div>
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/2BAP5-Ij2as" title="Casa Los Pellines - Constructora Waldorf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <a href="https://www.youtube.com/shorts/2BAP5-Ij2as" target="_blank" class="video-thumb"><img src="https://img.youtube.com/vi/2BAP5-Ij2as/hqdefault.jpg" alt="Casa Los Pellines - Video"></a>
         <div class="modelo-info">
           <h3>Casa Los Pellines</h3>
           <p class="modelo-ubicacion">Las Trancas, calle Los Pellines · Ñuble</p>
