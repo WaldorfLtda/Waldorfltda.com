@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Constructora Waldorf | Viviendas Personalizadas en Chile</title>
-  <meta name="description" content="Constructora Waldorf — más de 6 años construyendo viviendas personalizadas en parcelas y zonas rurales de Chile. Casas en Las Trancas, Pucón, Puerto Varas y toda la cordillera centro-sur: Ñuble, Biobío y Los Ríos.">
+  <meta name="description" content="Constructora Waldorf — más de 6 años construyendo viviendas personalizadas en parcelas y zonas rurales de Chile. Casas en Las Trancas, Pucón, Puerto Varas y toda la cordillera centro-sur, desde Santiago hasta Puerto Montt: Ñuble, Biobío y Los Ríos.">
   <meta name="keywords" content="constructora, casas personalizadas, Las Trancas, Chillán, Ñuble, Biobío, Los Ríos, Pucón, Puerto Varas, viviendas rurales, construcción madera, Chile, cordillera">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,7 +54,7 @@
     .btn-secondary:hover { border-color: var(--crema); background: rgba(255,255,255,0.1); }
 
     /* NOSOTROS */
-    .section-nosotros { padding: 7rem 2.5rem; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .section-nosotros { padding: 7rem 2.5rem; max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: center; }
     @media(max-width: 768px) { .section-nosotros { grid-template-columns: 1fr; gap: 2.5rem; } }
     .nosotros-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
     .section-label { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--madera); font-weight: 700; margin-bottom: 1rem; }
@@ -86,13 +86,37 @@
 .video-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
 
     /* CONSTRUAPP */
-    .section-construapp { background: var(--crema); padding: 6rem 2.5rem; }
-    .construapp-inner { max-width: 720px; margin: 0 auto; text-align: center; }
-    .construapp-inner .section-text { max-width: 620px; margin: 0 auto 1.2rem; }
-    .construapp-features { display: flex; justify-content: center; gap: 2.2rem; flex-wrap: wrap; margin: 2rem 0 2.2rem; }
-    .construapp-feature { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--madera); font-weight: 700; }
-    .btn-construapp { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--madera); color: var(--crema); padding: 1rem 2.2rem; text-decoration: none; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.3s; }
-    .btn-construapp:hover { background: var(--madera-claro); transform: translateY(-2px); }
+    :root { --app-primary: #2B6CB0; --app-accent: #5FA8D3; --app-bg: #0B1B2B; --app-screen: #0F2A47; }
+    .section-construapp { background: var(--app-bg); padding: 6rem 2.5rem; }
+    .construapp-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; }
+    @media(max-width: 900px) { .construapp-grid { grid-template-columns: 1fr; gap: 3rem; text-align: center; } .construapp-phone-wrap { order: -1; } .construapp-features { justify-content: center; } }
+    .construapp-text { max-width: 480px; }
+    .construapp-label { color: var(--app-accent); }
+    .construapp-title { color: var(--crema); }
+    .construapp-desc { font-size: 1rem; line-height: 1.8; color: rgba(245,240,232,0.75); margin-bottom: 1.6rem; font-weight: 300; }
+    .construapp-features { display: flex; flex-wrap: wrap; gap: 0.9rem 1.6rem; margin-bottom: 2rem; }
+    .construapp-feature { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--app-accent); font-weight: 700; padding-left: 1.1rem; position: relative; }
+    .construapp-feature::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; border-radius: 50%; background: var(--app-accent); }
+    .btn-construapp { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--app-primary); color: #fff; padding: 1rem 2.2rem; text-decoration: none; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.3s; }
+    .btn-construapp:hover { background: var(--app-accent); transform: translateY(-2px); }
+
+    .construapp-phone-wrap { display: flex; justify-content: center; }
+    .construapp-phone { width: 250px; background: #10243E; border-radius: 2.2rem; padding: 0.8rem; box-shadow: 0 25px 60px rgba(0,0,0,0.45); border: 2px solid rgba(255,255,255,0.08); position: relative; }
+    .construapp-notch { position: absolute; top: 0.8rem; left: 50%; transform: translateX(-50%); width: 70px; height: 18px; background: var(--app-bg); border-radius: 0 0 12px 12px; z-index: 2; }
+    .construapp-screen { background: var(--app-screen); border-radius: 1.5rem; overflow: hidden; padding-top: 1.6rem; }
+    .app-statusbar { display: flex; justify-content: space-between; padding: 0 1rem 0.6rem; font-size: 0.65rem; color: rgba(255,255,255,0.6); }
+    .app-topbar { padding-bottom: 0.8rem; margin: 0 1rem 0.8rem; font-family: 'Playfair Display', serif; font-size: 1rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .app-photo { margin: 0 1rem 1rem; border-radius: 0.6rem; overflow: hidden; aspect-ratio: 16/10; }
+    .app-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .app-progress { padding: 0 1rem; margin-bottom: 1.1rem; }
+    .app-progress-label { display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.75); margin-bottom: 0.4rem; }
+    .app-progress-bar { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+    .app-progress-fill { height: 100%; background: var(--app-accent); }
+    .app-timeline { padding: 0 1rem 1.4rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .app-timeline-item { font-size: 0.72rem; color: rgba(255,255,255,0.45); display: flex; align-items: center; gap: 0.5rem; }
+    .app-timeline-item.done { color: rgba(255,255,255,0.85); }
+    .app-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.2); flex-shrink: 0; }
+    .app-timeline-item.done .app-dot { background: var(--app-accent); }
 
     /* PROYECTOS */
     .section-proyectos { padding: 7rem 2.5rem; max-width: 1200px; margin: 0 auto; }
@@ -244,7 +268,7 @@
       <h2 class="section-title">Construimos espacios que se adaptan a tu vida y tu entorno</h2>
       <p class="section-text">Somos una constructora con más de 6 años de experiencia, especializada en viviendas personalizadas de alto estándar. Nuestras raíces están en la construcción en cordillera — entornos donde las nevadas, la humedad y las temperaturas extremas exigen un nivel de calidad y aislación que va mucho más allá de lo convencional.</p>
       <p class="section-text">Ese estándar de exigencia lo aplicamos a todos nuestros proyectos: desde casas en parcelas rurales y zonas boscosas hasta viviendas en la costa y el valle. Cada obra es un proyecto único que parte del terreno, el entorno y la vida que quieres construir ahí.</p>
-      <p class="section-text">Operamos en toda la zona centro-sur de Chile: regiones de Ñuble, Biobío y Los Ríos, incluyendo Las Trancas, Pucón, Puerto Varas y otras localidades de cordillera.</p>
+      <p class="section-text">Operamos en toda la zona centro-sur de Chile, desde Santiago hasta Puerto Montt: regiones de Ñuble, Biobío y Los Ríos, incluyendo Las Trancas, Pucón, Puerto Varas y otras localidades de cordillera.</p>
     </div>
   </section>
 
@@ -259,16 +283,37 @@
 
   <!-- CONSTRUAPP -->
   <section class="section-construapp" id="construapp">
-    <div class="construapp-inner reveal">
-      <p class="section-label">Innovación Waldorf</p>
-      <h2 class="section-title">Sigue tu obra en tiempo real, desde tu celular</h2>
-      <p class="section-text">Con ConstruApp haces seguimiento del avance de tu proyecto día a día: fotos, hitos y estado de la obra, directo desde tu teléfono. Sin llamadas, sin incertidumbre — transparencia total desde el primer día hasta la entrega de llaves.</p>
-      <div class="construapp-features">
-        <span class="construapp-feature">Avance en tiempo real</span>
-        <span class="construapp-feature">Sin llamadas</span>
-        <span class="construapp-feature">Sin incertidumbre</span>
+    <div class="construapp-grid">
+      <div class="construapp-text reveal">
+        <p class="section-label construapp-label">Innovación Waldorf</p>
+        <h2 class="section-title construapp-title">Tu obra, siempre al día</h2>
+        <p class="construapp-desc">Con ConstruApp haces seguimiento del avance de tu proyecto día a día: fotos, hitos y estado de la obra, directo desde tu teléfono. Sin llamadas, sin incertidumbre — transparencia total desde el primer día hasta la entrega de llaves.</p>
+        <div class="construapp-features">
+          <span class="construapp-feature">Avance en tiempo real</span>
+          <span class="construapp-feature">Sin llamadas</span>
+          <span class="construapp-feature">Sin incertidumbre</span>
+        </div>
+        <a href="https://construapp.cl" target="_blank" class="btn-construapp">Ver demo de ConstruApp →</a>
       </div>
-      <a href="https://construapp.cl" target="_blank" class="btn-construapp">Ver demo de ConstruApp →</a>
+      <div class="construapp-phone-wrap reveal">
+        <div class="construapp-phone">
+          <div class="construapp-notch"></div>
+          <div class="construapp-screen">
+            <div class="app-statusbar"><span>9:41</span><span>●●●</span></div>
+            <div class="app-topbar">ConstruApp</div>
+            <div class="app-photo"><img src="https://img.youtube.com/vi/ycd36Ts3Dy0/hqdefault.jpg" alt="Avance de obra"></div>
+            <div class="app-progress">
+              <div class="app-progress-label"><span>Avance de obra</span><span>78%</span></div>
+              <div class="app-progress-bar"><div class="app-progress-fill" style="width:78%"></div></div>
+            </div>
+            <div class="app-timeline">
+              <div class="app-timeline-item done"><span class="app-dot"></span>Radier terminado</div>
+              <div class="app-timeline-item done"><span class="app-dot"></span>Estructura instalada</div>
+              <div class="app-timeline-item"><span class="app-dot"></span>Instalación de ventanas</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
