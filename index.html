@@ -41,6 +41,17 @@
       white-space: nowrap;
     }
     .nav-cta:hover { background: var(--madera-claro); }
+    @media(max-width: 640px) {
+      nav { padding: 0.7rem 0.9rem; }
+      .nav-logo span { font-size: 0.78rem !important; }
+      .nav-right { gap: 0.6rem; }
+      .nav-link { font-size: 0.68rem; letter-spacing: 0.04em; }
+      .nav-ig svg { width: 18px; height: 18px; }
+      .nav-cta { padding: 0.45rem 0.7rem; font-size: 0.62rem; letter-spacing: 0.02em; }
+    }
+    @media(max-width: 360px) {
+      .nav-link { display: none; }
+    }
 
     /* HERO */
     .hero { min-height: 100vh; position: relative; display: flex; align-items: flex-end; padding-bottom: 6rem; }
