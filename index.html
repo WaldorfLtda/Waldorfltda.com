@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Constructora Waldorf | Viviendas Personalizadas en Chile</title>
-  <meta name="description" content="Constructora Waldorf — más de 6 años construyendo viviendas personalizadas en parcelas y zonas rurales de Chile. Casas en Las Trancas, Chillán y sur de Chile.">
-  <meta name="keywords" content="constructora, casas personalizadas, Las Trancas, Chillán, viviendas rurales, construcción madera, Chile, cordillera">
+  <meta name="description" content="Constructora Waldorf — más de 6 años construyendo viviendas personalizadas en parcelas y zonas rurales de Chile. Casas en Las Trancas, Pucón, Puerto Varas y toda la cordillera centro-sur: Ñuble, Biobío y Los Ríos.">
+  <meta name="keywords" content="constructora, casas personalizadas, Las Trancas, Chillán, Ñuble, Biobío, Los Ríos, Pucón, Puerto Varas, viviendas rurales, construcción madera, Chile, cordillera">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -73,14 +73,27 @@
 .videos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
 .video-card { text-decoration: none; color: var(--negro); background: white; border-radius: 4px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .video-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
-.video-thumb { position: relative; overflow: hidden; aspect-ratio: 16/9; }
+.video-thumb { position: relative; overflow: hidden; aspect-ratio: 16/9; background: var(--negro); }
 .video-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .video-card:hover .video-thumb img { transform: scale(1.05); }
+.video-thumb.img-error::before { content: 'Foto próximamente'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--crema); opacity: 0.5; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .video-thumb::after { content: '▶'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
 .video-info { padding: 1.2rem; text-align: left; }
 .video-info h3 { font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 0.4rem; color: var(--negro); }
 .video-info p { font-size: 0.85rem; color: var(--gris); }
 @media(max-width: 768px) { .videos-grid { grid-template-columns: 1fr; } }
+.video-embed { position: relative; aspect-ratio: 9/16; max-width: 315px; margin: 0 auto; background: var(--negro); }
+.video-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+    /* CONSTRUAPP */
+    .section-construapp { background: var(--crema); padding: 6rem 2.5rem; }
+    .construapp-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+    .construapp-inner .section-text { max-width: 620px; margin: 0 auto 1.2rem; }
+    .construapp-features { display: flex; justify-content: center; gap: 2.2rem; flex-wrap: wrap; margin: 2rem 0 2.2rem; }
+    .construapp-feature { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--madera); font-weight: 700; }
+    .btn-construapp { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--madera); color: var(--crema); padding: 1rem 2.2rem; text-decoration: none; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.3s; }
+    .btn-construapp:hover { background: var(--madera-claro); transform: translateY(-2px); }
+
     /* PROYECTOS */
     .section-proyectos { padding: 7rem 2.5rem; max-width: 1200px; margin: 0 auto; }
     .proyectos-header { text-align: center; margin-bottom: 4rem; }
@@ -95,6 +108,24 @@
     .ver-mas { text-align: center; margin-top: 3rem; }
     .btn-ver-mas { display: inline-block; border: 2px solid var(--madera); color: var(--madera); padding: 1rem 2.5rem; text-decoration: none; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s; }
     .btn-ver-mas:hover { background: var(--madera); color: var(--crema); }
+
+    /* CATALOGO DE MODELOS */
+    .section-catalogo { padding: 7rem 2.5rem; max-width: 1200px; margin: 0 auto; }
+    .catalogo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+    @media(max-width: 900px) { .catalogo-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media(max-width: 560px) { .catalogo-grid { grid-template-columns: 1fr; } }
+    .modelo-card { background: var(--blanco); border-radius: 4px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.06); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .modelo-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+    .modelo-thumb { position: relative; aspect-ratio: 4/3; overflow: hidden; background: var(--negro); }
+    .modelo-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .modelo-card:hover .modelo-thumb img { transform: scale(1.05); }
+    .modelo-thumb.img-error::before { content: 'Foto próximamente'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--crema); opacity: 0.5; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .modelo-info { padding: 1.5rem; }
+    .modelo-info h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 0.3rem; color: var(--negro); }
+    .modelo-ubicacion { font-size: 0.85rem; color: var(--madera); letter-spacing: 0.02em; margin-bottom: 1rem; }
+    .modelo-specs { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; font-size: 0.82rem; color: var(--gris); margin-bottom: 1.2rem; }
+    .modelo-precio { font-size: 0.95rem; font-weight: 700; color: var(--negro); border-top: 1px solid #eee; padding-top: 0.9rem; }
+    .modelo-precio span { color: var(--madera); }
 
     /* SERVICIOS */
     .section-servicios { background: #F0EBE1; padding: 7rem 2.5rem; }
@@ -213,7 +244,7 @@
       <h2 class="section-title">Construimos espacios que se adaptan a tu vida y tu entorno</h2>
       <p class="section-text">Somos una constructora con más de 6 años de experiencia, especializada en viviendas personalizadas de alto estándar. Nuestras raíces están en la construcción en cordillera — entornos donde las nevadas, la humedad y las temperaturas extremas exigen un nivel de calidad y aislación que va mucho más allá de lo convencional.</p>
       <p class="section-text">Ese estándar de exigencia lo aplicamos a todos nuestros proyectos: desde casas en parcelas rurales y zonas boscosas hasta viviendas en la costa y el valle. Cada obra es un proyecto único que parte del terreno, el entorno y la vida que quieres construir ahí.</p>
-      <p class="section-text">Operamos en La zona centro sur del pais.</p>
+      <p class="section-text">Operamos en toda la zona centro-sur de Chile: regiones de Ñuble, Biobío y Los Ríos, incluyendo Las Trancas, Pucón, Puerto Varas y otras localidades de cordillera.</p>
     </div>
   </section>
 
@@ -225,6 +256,21 @@
       <div class="reveal"><div class="stat-num">6+</div><div class="stat-label">Años de experiencia</div></div>
     </div>
   </div>
+
+  <!-- CONSTRUAPP -->
+  <section class="section-construapp" id="construapp">
+    <div class="construapp-inner reveal">
+      <p class="section-label">Innovación Waldorf</p>
+      <h2 class="section-title">Sigue tu obra en tiempo real, desde tu celular</h2>
+      <p class="section-text">Con ConstruApp haces seguimiento del avance de tu proyecto día a día: fotos, hitos y estado de la obra, directo desde tu teléfono. Sin llamadas, sin incertidumbre — transparencia total desde el primer día hasta la entrega de llaves.</p>
+      <div class="construapp-features">
+        <span class="construapp-feature">Avance en tiempo real</span>
+        <span class="construapp-feature">Sin llamadas</span>
+        <span class="construapp-feature">Sin incertidumbre</span>
+      </div>
+      <a href="https://construapp.cl" target="_blank" class="btn-construapp">Ver demo de ConstruApp →</a>
+    </div>
+  </section>
 
   <!-- VIDEOS -->
 <section class="section-videos" id="videos">
@@ -257,6 +303,11 @@
       <div class="video-thumb"><img src="https://img.youtube.com/vi/qsKjp70pitY/hqdefault.jpg" alt="Recorrido Interior"></div>
       <div class="video-info"><h3>Recorrido Interior</h3><p>Vivienda personalizada · Proyecto entregado</p></div>
     </a>
+    <div class="video-card reveal">
+      <div class="video-thumb"><img src="casa-los-pellines-fachada.jpg" alt="Casa Los Pellines - Fachada" onerror="this.parentElement.classList.add('img-error');this.remove()"></div>
+      <div class="video-embed"><iframe src="https://www.youtube.com/embed/2BAP5-Ij2as" title="Casa Los Pellines - Constructora Waldorf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video-info"><h3>Casa Los Pellines · Las Trancas, Ñuble</h3><p>110 m² · 2 dorm · 2 baños · Desde 28 UF/m² + IVA</p></div>
+    </div>
   </div>
 </section>
   <!-- PROYECTOS -->
@@ -279,6 +330,38 @@
     </div>
     <div class="ver-mas reveal">
       <a href="#" class="btn-ver-mas" onclick="showGallery(); return false;">Ver todos los proyectos →</a>
+    </div>
+  </section>
+
+  <!-- CATALOGO DE MODELOS -->
+  <section class="section-catalogo" id="catalogo">
+    <div class="proyectos-header reveal">
+      <p class="section-label">Modelos disponibles</p>
+      <h2 class="section-title">Catálogo de Modelos</h2>
+      <p class="section-text" style="max-width:650px;margin:0 auto;">Casas ya construidas, listas para replicar en tu terreno. Revisa distribución, superficie y precio referencial de cada modelo.</p>
+    </div>
+    <div class="catalogo-grid">
+      <div class="modelo-card reveal">
+        <div class="modelo-thumb"><img src="casa-los-pellines-fachada.jpg" alt="Casa Los Pellines - Fachada" onerror="this.parentElement.classList.add('img-error');this.remove()"></div>
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/2BAP5-Ij2as" title="Casa Los Pellines - Constructora Waldorf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="modelo-info">
+          <h3>Casa Los Pellines</h3>
+          <p class="modelo-ubicacion">Las Trancas, calle Los Pellines · Ñuble</p>
+          <div class="modelo-specs">
+            <span>110 m² habitables</span>
+            <span>1 nivel</span>
+            <span>2 dorm</span>
+            <span>2 baños</span>
+            <span>Altillo 40 m²</span>
+            <span>Terraza semicubierta 40 m²</span>
+            <span>Radier</span>
+            <span>Calefacción central</span>
+            <span>Ventanas PVC</span>
+          </div>
+          <p class="modelo-precio">Desde <span>28 UF/m² + IVA</span></p>
+        </div>
+      </div>
+      <!-- Próximos modelos: duplicar la estructura .modelo-card de arriba y completar con los datos de cada proyecto -->
     </div>
   </section>
 
