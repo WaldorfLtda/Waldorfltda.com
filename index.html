@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Constructora Waldorf | Viviendas Personalizadas en Chile</title>
-  <meta name="description" content="Constructora Waldorf — más de 6 años construyendo viviendas personalizadas en parcelas y zonas rurales de Chile. Casas en Las Trancas, Pucón, Puerto Varas y toda la cordillera centro-sur, desde Santiago hasta Puerto Montt: Ñuble, Biobío y Los Ríos.">
+  <meta name="description" content="Constructora Waldorf, más de 6 años construyendo viviendas personalizadas en parcelas y zonas rurales de Chile. Casas en Las Trancas, Pucón, Puerto Varas y toda la cordillera centro-sur, desde Santiago hasta Puerto Montt: Ñuble, Biobío y Los Ríos.">
   <meta name="keywords" content="constructora, casas personalizadas, Las Trancas, Chillán, Ñuble, Biobío, Los Ríos, Pucón, Puerto Varas, viviendas rurales, construcción madera, Chile, cordillera">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -139,16 +139,28 @@
     @media(max-width: 560px) { .catalogo-grid { grid-template-columns: 1fr; } }
     .modelo-card { background: var(--blanco); border-radius: 4px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,0.06); transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .modelo-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
-    .modelo-thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--negro); }
+    .modelo-thumb { display: block; position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--negro); }
     .modelo-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: center bottom; transition: transform 0.5s ease; }
     .modelo-card:hover .modelo-thumb img { transform: scale(1.05); }
     .modelo-thumb.img-error::before { content: 'Foto próximamente'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--crema); opacity: 0.5; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
     .modelo-info { padding: 1.5rem; }
     .modelo-info h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 0.3rem; color: var(--negro); }
+    .modelo-info h3 a { color: inherit; text-decoration: none; }
+    .modelo-info h3 a:hover { color: var(--madera); }
     .modelo-ubicacion { font-size: 0.85rem; color: var(--madera); letter-spacing: 0.02em; margin-bottom: 1rem; }
-    .modelo-specs { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; font-size: 0.82rem; color: var(--gris); margin-bottom: 1.2rem; }
+    .modelo-specs { display: flex; flex-wrap: wrap; gap: 0.5rem 0.7rem; font-size: 0.82rem; color: var(--gris); margin-bottom: 1.2rem; align-items: center; }
+    .modelo-specs span.extra { border: 1px solid var(--madera-claro); border-radius: 3px; padding: 0.1rem 0.5rem; color: var(--madera); font-size: 0.78rem; }
     .modelo-precio { font-size: 0.95rem; font-weight: 700; color: var(--negro); border-top: 1px solid #eee; padding-top: 0.9rem; }
     .modelo-precio span { color: var(--madera); }
+    .btn-ver-ficha { display: inline-block; margin-top: 1rem; color: var(--madera); text-decoration: none; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.3s; }
+    .btn-ver-ficha:hover { color: var(--madera-claro); }
+    .catalogo-statement { background: #0d0d0d; width: 100vw; margin: 3rem calc(50% - 50vw) 3rem; padding: 3.5rem 2.5rem; }
+    .catalogo-statement-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .catalogo-statement h3 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3.5vw, 2rem); color: #e5c88a; margin-bottom: 1.2rem; }
+    .catalogo-statement p { font-size: 1rem; line-height: 1.85; color: rgba(245,240,232,0.85); font-weight: 300; margin-bottom: 2rem; }
+    .btn-catalogo-cta { display: inline-flex; align-items: center; gap: 0.5rem; background: #e5c88a; color: #0d0d0d; padding: 1.1rem 2.4rem; text-decoration: none; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.3s; }
+    .btn-catalogo-cta:hover { background: #f0dba8; transform: translateY(-2px); }
+    @media(max-width: 600px) { .catalogo-statement { padding: 2.8rem 1.5rem; } }
 
     /* SERVICIOS */
     .section-servicios { background: #F0EBE1; padding: 7rem 2.5rem; }
@@ -269,7 +281,7 @@
     <div class="reveal">
       <p class="section-label">Quiénes somos</p>
       <h2 class="section-title">Construimos espacios que se adaptan a tu vida y tu entorno</h2>
-      <p class="section-text">Somos una constructora con más de 6 años de experiencia, especializada en viviendas personalizadas de alto estándar. Nuestras raíces están en la construcción en cordillera — entornos donde las nevadas, la humedad y las temperaturas extremas exigen un nivel de calidad y aislación que va mucho más allá de lo convencional.</p>
+      <p class="section-text">Somos una constructora con más de 6 años de experiencia, especializada en viviendas personalizadas de alto estándar. Nuestras raíces están en la construcción en cordillera, entornos donde las nevadas, la humedad y las temperaturas extremas exigen un nivel de calidad y aislación que va mucho más allá de lo convencional.</p>
       <p class="section-text">Ese estándar de exigencia lo aplicamos a todos nuestros proyectos: desde casas en parcelas rurales y zonas boscosas hasta viviendas en la costa y el valle. Cada obra es un proyecto único que parte del terreno, el entorno y la vida que quieres construir ahí.</p>
       <p class="section-text">Operamos en toda la zona centro-sur de Chile, desde Santiago hasta Puerto Montt: regiones de Ñuble, Biobío y Los Ríos, incluyendo Las Trancas, Pucón, Puerto Varas y otras localidades de cordillera.</p>
     </div>
@@ -281,26 +293,35 @@
       <p class="section-label">Modelos disponibles</p>
       <h2 class="section-title">Catálogo de Modelos</h2>
       <p class="section-text" style="max-width:650px;margin:0 auto;">Casas ya construidas, listas para replicar en tu terreno. Revisa distribución, superficie y precio referencial de cada modelo.</p>
+      <p class="section-text" style="max-width:650px;margin:0.8rem auto 0;">Cada modelo puedes construirlo tal como está o adaptarlo a tu gusto, cambiar distribución, terminaciones o dimensiones según tu terreno y necesidades. Y si prefieres partir completamente desde cero, seguimos ofreciendo diseño 100% personalizado, tal como lo hemos hecho siempre.</p>
+    </div>
+    <div class="catalogo-statement reveal">
+      <div class="catalogo-statement-inner">
+        <h3>¿Por qué un modelo de catálogo?</h3>
+        <p>No estás comprando un diseño en el papel que nunca se probó. Cada modelo de este catálogo ya está construido, habitado y funcionando. Sabemos exactamente cómo se comporta, cuánto cuesta y cuánto demora. Elegir un modelo no es resignarte a una casa repetida: es partir de una base validada y ajustarla a tu terreno, tu presupuesto y tu forma de vivir. Rápido y transparente como un catálogo, pero construido con radier de hormigón armado, estructura en pino impregnado y aislación térmica real. Nada de liviano, nada de temporal.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFWxeckGoZOZAJ41CSpP3902GEZNZPkzFKGf_v0m018IUDnA/viewform?usp=preview" target="_blank" class="btn-catalogo-cta">Elige tu modelo y cotiza en minutos</a>
+      </div>
     </div>
     <div class="catalogo-grid">
       <div class="modelo-card reveal">
-        <div class="modelo-thumb"><img src="casa-los-pellines-fachada.jpg" alt="Casa Los Pellines - Fachada" onerror="this.parentElement.classList.add('img-error');this.remove()"></div>
+        <a href="modelo-casa-los-pellines.html" class="modelo-thumb"><img src="casa-los-pellines-fachada.jpg" alt="Casa Los Pellines - Fachada" onerror="this.parentElement.classList.add('img-error');this.remove()"></a>
         <a href="https://www.youtube.com/shorts/2BAP5-Ij2as" target="_blank" class="video-thumb"><img src="https://img.youtube.com/vi/2BAP5-Ij2as/hqdefault.jpg" alt="Casa Los Pellines - Video"></a>
         <div class="modelo-info">
-          <h3>Casa Los Pellines</h3>
+          <h3><a href="modelo-casa-los-pellines.html">Casa Los Pellines</a></h3>
           <p class="modelo-ubicacion">Las Trancas, calle Los Pellines · Ñuble</p>
           <div class="modelo-specs">
             <span>110 m² habitables</span>
             <span>1 nivel</span>
             <span>2 dorm</span>
             <span>2 baños</span>
-            <span>Altillo 40 m²</span>
-            <span>Terraza semicubierta 40 m²</span>
+            <span>Altillo 15 m²</span>
+            <span class="extra">Terraza semicubierta 40 m² (extra)</span>
             <span>Radier</span>
-            <span>Calefacción central</span>
+            <span class="extra">Calefacción central (extra)</span>
             <span>Ventanas PVC</span>
           </div>
           <p class="modelo-precio">Desde <span>28 UF/m² + IVA</span></p>
+          <a href="modelo-casa-los-pellines.html" class="btn-ver-ficha">Ver ficha completa →</a>
         </div>
       </div>
       <!-- Próximos modelos: duplicar la estructura .modelo-card de arriba y completar con los datos de cada proyecto -->
@@ -322,7 +343,7 @@
       <div class="construapp-text reveal">
         <p class="section-label construapp-label">Innovación Waldorf</p>
         <h2 class="section-title construapp-title">Tu obra, siempre al día</h2>
-        <p class="construapp-desc">Con ConstruApp haces seguimiento del avance de tu proyecto día a día: fotos, hitos y estado de la obra, directo desde tu teléfono. Sin llamadas, sin incertidumbre — transparencia total desde el primer día hasta la entrega de llaves.</p>
+        <p class="construapp-desc">Con ConstruApp haces seguimiento del avance de tu proyecto día a día: fotos, hitos y estado de la obra, directo desde tu teléfono. Sin llamadas, sin incertidumbre. Transparencia total desde el primer día hasta la entrega de llaves.</p>
         <div class="construapp-features">
           <span class="construapp-feature">Avance en tiempo real</span>
           <span class="construapp-feature">Sin llamadas</span>
