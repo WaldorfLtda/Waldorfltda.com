@@ -133,7 +133,8 @@
     .btn-ver-mas:hover { background: var(--madera); color: var(--crema); }
 
     /* CATALOGO DE MODELOS */
-    .section-catalogo { padding: 7rem 2.5rem; max-width: 1200px; margin: 0 auto; }
+    .section-catalogo { background: var(--crema); padding: 7rem 0; }
+    .catalogo-inner { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; }
     .catalogo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
     @media(max-width: 900px) { .catalogo-grid { grid-template-columns: repeat(2, 1fr); } }
     @media(max-width: 560px) { .catalogo-grid { grid-template-columns: 1fr; } }
@@ -289,11 +290,13 @@
 
   <!-- CATALOGO DE MODELOS -->
   <section class="section-catalogo" id="catalogo">
+    <div class="catalogo-inner">
     <div class="proyectos-header reveal">
       <p class="section-label">Modelos disponibles</p>
       <h2 class="section-title">Catálogo de Modelos</h2>
       <p class="section-text" style="max-width:650px;margin:0 auto;">Casas ya construidas, listas para replicar en tu terreno. Revisa distribución, superficie y precio referencial de cada modelo.</p>
       <p class="section-text" style="max-width:650px;margin:0.8rem auto 0;">Cada modelo puedes construirlo tal como está o adaptarlo a tu gusto, cambiar distribución, terminaciones o dimensiones según tu terreno y necesidades. Y si prefieres partir completamente desde cero, seguimos ofreciendo diseño 100% personalizado, tal como lo hemos hecho siempre.</p>
+    </div>
     </div>
     <div class="catalogo-statement reveal">
       <div class="catalogo-statement-inner">
@@ -302,6 +305,7 @@
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFWxeckGoZOZAJ41CSpP3902GEZNZPkzFKGf_v0m018IUDnA/viewform?usp=preview" target="_blank" class="btn-catalogo-cta">Elige tu modelo y cotiza en minutos</a>
       </div>
     </div>
+    <div class="catalogo-inner">
     <div class="catalogo-grid">
       <div class="modelo-card reveal">
         <a href="modelo-casa-los-pellines.html" class="modelo-thumb"><img src="casa-los-pellines-fachada.jpg" alt="Casa Los Pellines - Fachada" onerror="this.parentElement.classList.add('img-error');this.remove()"></a>
@@ -325,6 +329,7 @@
         </div>
       </div>
       <!-- Próximos modelos: duplicar la estructura .modelo-card de arriba y completar con los datos de cada proyecto -->
+    </div>
     </div>
   </section>
 
