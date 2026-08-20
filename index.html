@@ -141,6 +141,7 @@
     .modelo-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
     .modelo-thumb { display: block; position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--negro); }
     .modelo-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: center bottom; transition: transform 0.5s ease; }
+    .modelo-thumb img.contain { object-fit: contain; }
     .modelo-card:hover .modelo-thumb img { transform: scale(1.05); }
     .modelo-thumb.img-error::before { content: 'Foto próximamente'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--crema); opacity: 0.5; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
     .modelo-info { padding: 1.5rem; }
@@ -324,7 +325,7 @@
         </div>
       </div>
       <div class="modelo-card reveal">
-        <a href="modelo-casa-los-notros.html" class="modelo-thumb"><img src="casa-los-notros-fachada.jpg" alt="Casa Los Notros - Fachada" onerror="this.parentElement.classList.add('img-error');this.remove()"></a>
+        <a href="modelo-casa-los-notros.html" class="modelo-thumb"><img class="contain" src="casa-los-notros-fachada.jpg" alt="Casa Los Notros - Fachada" onerror="this.parentElement.classList.add('img-error');this.remove()"></a>
         <a href="https://www.youtube.com/shorts/fv4C83YVO3k" target="_blank" class="video-thumb"><img src="https://img.youtube.com/vi/fv4C83YVO3k/hqdefault.jpg" alt="Casa Los Notros - Video"></a>
         <div class="modelo-info">
           <h3><a href="modelo-casa-los-notros.html">Casa Los Notros</a></h3>
