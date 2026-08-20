@@ -43,6 +43,7 @@
     .mdl-list li::before { content: '•'; position: absolute; left: 0; color: var(--oro); }
     .mdl-list-muted li { color: var(--mdl-gris); }
     .mdl-tag-extra { display: inline-block; margin-left: 0.5rem; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--oro); border: 1px solid var(--oro); border-radius: 3px; padding: 0.15rem 0.5rem; vertical-align: middle; }
+    .mdl-tag-premium { display: inline-block; margin-left: 0.5rem; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; background: var(--oro); border-radius: 3px; padding: 0.15rem 0.5rem; vertical-align: middle; }
 
     .mdl-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
     .mdl-table th, .mdl-table td { text-align: left; padding: 0.85rem 0.5rem; border-bottom: 1px solid var(--linea); font-family: 'Mulish', sans-serif; font-size: 0.92rem; color: #3a3a36; }
@@ -150,7 +151,7 @@
       <tr><td>Estructura y tabiquería</td><td>Pino impregnado</td></tr>
       <tr><td>Aislación térmica</td><td>Espuma de poliuretano de alto rendimiento</td></tr>
       <tr><td>Cubierta</td><td>Zinc prepintado</td></tr>
-      <tr><td>Ventanas</td><td>Termopanel PVC</td></tr>
+      <tr><td>Ventanas</td><td>Termopanel PVC <span class="mdl-tag-premium">Premium</span></td></tr>
       <tr><td>Red de agua</td><td>Tuberías PPR</td></tr>
       <tr><td>Agua caliente</td><td>Calefont a gas o caldera, según proyecto</td></tr>
       <tr><td>Sistema sanitario</td><td>Fosa séptica y alcantarillado incluidos</td></tr>
@@ -264,6 +265,7 @@
   </div>
 </footer>
 
+<script src="protect.js"></script>
 <script>
   document.querySelectorAll('.mdl-gal-item img, .mdl-hero-photo img').forEach(img => {
     img.style.cursor = 'zoom-in';
