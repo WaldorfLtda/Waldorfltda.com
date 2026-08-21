@@ -149,10 +149,11 @@
     .modelo-info h3 a { color: inherit; text-decoration: none; }
     .modelo-info h3 a:hover { color: var(--madera); }
     .modelo-ubicacion { font-size: 0.85rem; color: var(--madera); letter-spacing: 0.02em; margin-bottom: 1rem; }
-    .modelo-specs { display: flex; flex-wrap: wrap; gap: 0.5rem 0.7rem; font-size: 0.82rem; color: var(--gris); margin-bottom: 1.2rem; align-items: center; }
-    .modelo-specs span.extra { border: 1px solid var(--madera-claro); border-radius: 3px; padding: 0.1rem 0.5rem; color: var(--madera); font-size: 0.78rem; }
+    .modelo-specs { display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.82rem; color: var(--gris); margin-bottom: 1.2rem; }
+    .modelo-specs span.extra { border: 1px solid var(--madera-claro); border-radius: 3px; padding: 0.1rem 0.5rem; color: var(--madera); font-size: 0.78rem; align-self: flex-start; }
     .modelo-precio { font-size: 0.95rem; font-weight: 700; color: var(--negro); border-top: 1px solid #eee; padding-top: 0.9rem; }
     .modelo-precio span { color: var(--madera); }
+    .modelo-precio-m2 { font-size: 0.78rem; font-weight: 500; color: var(--gris); margin-top: 0.2rem; }
     .btn-ver-ficha { display: inline-block; margin-top: 1rem; color: var(--madera); text-decoration: none; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.3s; }
     .btn-ver-ficha:hover { color: var(--madera-claro); }
     .catalogo-statement { background: #0d0d0d; width: 100vw; margin: 3rem calc(50% - 50vw) 3rem; padding: 3.5rem 2.5rem; }
@@ -321,6 +322,7 @@
             <span class="extra">Calefacción central (extra)</span>
           </div>
           <p class="modelo-precio">Desde <span>3.080 UF + IVA</span></p>
+          <p class="modelo-precio-m2">28 UF/m² + IVA</p>
           <a href="modelo-casa-los-pellines.html" class="btn-ver-ficha">Ver ficha completa →</a>
         </div>
       </div>
@@ -342,6 +344,7 @@
             <span class="extra">Calefacción central (extra)</span>
           </div>
           <p class="modelo-precio">Desde <span>1.156 UF + IVA</span></p>
+          <p class="modelo-precio-m2">25 UF/m² + IVA</p>
           <a href="modelo-casa-los-notros.html" class="btn-ver-ficha">Ver ficha completa →</a>
         </div>
       </div>
@@ -362,7 +365,29 @@
             <span class="extra">Calefacción central (extra)</span>
           </div>
           <p class="modelo-precio">Desde <span>2.842,25 UF + IVA</span></p>
+          <p class="modelo-precio-m2">25 UF/m² + IVA</p>
           <a href="modelo-casa-maihuen.html" class="btn-ver-ficha">Ver ficha completa →</a>
+        </div>
+      </div>
+      <div class="modelo-card reveal">
+        <a href="modelo-casa-los-pretiles.html" class="modelo-thumb" style="aspect-ratio:8/9"><img src="casa-los-pretiles-fachada.jpg" alt="Casa Los Pretiles - Fachada" onerror="this.parentElement.classList.add('img-error');this.remove()"></a>
+        <div class="modelo-info">
+          <h3><a href="modelo-casa-los-pretiles.html">Casa Los Pretiles</a></h3>
+          <p class="modelo-ubicacion">Fundo Los Pretiles, Las Trancas · Región de Ñuble</p>
+          <div class="modelo-specs">
+            <span>95 m² habitables</span>
+            <span>1 nivel</span>
+            <span>3 dorm</span>
+            <span>2 baños</span>
+            <span>Altura cumbre 6,30 m</span>
+            <span>Ventanas PVC</span>
+            <span class="extra">Terraza semidescubierta 70 m² (extra)</span>
+            <span class="extra">Altillo 10 m² (extra)</span>
+            <span class="extra">Calefacción central (extra)</span>
+          </div>
+          <p class="modelo-precio">Desde <span>2.375 UF + IVA</span></p>
+          <p class="modelo-precio-m2">25 UF/m² + IVA</p>
+          <a href="modelo-casa-los-pretiles.html" class="btn-ver-ficha">Ver ficha completa →</a>
         </div>
       </div>
       <!-- Próximos modelos: duplicar la estructura .modelo-card de arriba y completar con los datos de cada proyecto -->
