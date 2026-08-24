@@ -36,12 +36,12 @@
     .nav-ig { color: var(--crema); opacity: 0.85; transition: opacity 0.3s; display: flex; align-items: center; }
     .nav-ig:hover { opacity: 1; }
     .nav-cta {
-      background: var(--madera); color: var(--crema); padding: 0.6rem 1.3rem;
-      text-decoration: none; font-size: 0.82rem; letter-spacing: 0.1em;
-      text-transform: uppercase; font-weight: 700; transition: background 0.3s;
-      white-space: nowrap;
+      background: var(--madera); color: var(--crema); padding: 0.6rem 1.4rem;
+      text-decoration: none; font-size: 0.85rem; letter-spacing: 0.01em;
+      font-weight: 600; border-radius: 999px; transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+      white-space: nowrap; box-shadow: 0 2px 10px rgba(0,0,0,0.18);
     }
-    .nav-cta:hover { background: var(--madera-claro); }
+    .nav-cta:hover { background: var(--madera-claro); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.22); }
     @media(max-width: 640px) {
       nav { padding: 0.7rem 0.9rem; }
       .nav-logo span { font-size: 0.78rem !important; }
@@ -62,10 +62,10 @@
     .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--crema); line-height: 1.1; margin-bottom: 1.5rem; }
     .hero p { font-size: 1.1rem; color: rgba(245,240,232,0.85); line-height: 1.7; margin-bottom: 2.5rem; font-weight: 300; max-width: 520px; }
     .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--madera); color: var(--crema); padding: 1rem 2rem; text-decoration: none; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.3s; }
-    .btn-primary:hover { background: var(--madera-claro); transform: translateY(-2px); }
-    .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; border: 2px solid rgba(245,240,232,0.6); color: var(--crema); padding: 1rem 2rem; text-decoration: none; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.3s; }
-    .btn-secondary:hover { border-color: var(--crema); background: rgba(255,255,255,0.1); }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--madera); color: var(--crema); padding: 0.95rem 2rem; text-decoration: none; font-size: 0.92rem; font-weight: 600; letter-spacing: 0.01em; border-radius: 999px; box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: background 0.25s, transform 0.25s, box-shadow 0.25s; }
+    .btn-primary:hover { background: var(--madera-claro); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.25); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; border: 1.5px solid rgba(245,240,232,0.5); color: var(--crema); padding: 0.95rem 2rem; text-decoration: none; font-size: 0.92rem; font-weight: 600; letter-spacing: 0.01em; border-radius: 999px; transition: all 0.25s; }
+    .btn-secondary:hover { border-color: var(--crema); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
 
     /* NOSOTROS */
     .section-nosotros { padding: 7rem 2.5rem; max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: center; }
@@ -74,13 +74,14 @@
 
     /* BLOG TEASER */
     .section-blog-teaser { background: var(--negro); }
-    .blog-teaser-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+    .blog-teaser-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; }
     @media(max-width: 768px) { .blog-teaser-grid { grid-template-columns: 1fr; } }
-    .blog-teaser-img { width: 100%; height: 100%; min-height: 320px; object-fit: cover; filter: brightness(0.85); display: block; }
-    .blog-teaser-content { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; }
-    .blog-teaser-content .section-label { color: var(--madera-claro); }
-    .blog-teaser-content .section-title { color: var(--crema); margin-bottom: 1.2rem; }
-    .blog-teaser-content p { color: rgba(245,240,232,0.75); font-weight: 300; margin-bottom: 2rem; line-height: 1.7; }
+    .blog-teaser-img { width: 100%; height: 520px; object-fit: cover; object-position: center 68%; filter: brightness(0.85); display: block; }
+    @media(max-width: 768px) { .blog-teaser-img { height: 320px; } }
+    .blog-teaser-content { padding: 3rem 2.5rem; display: flex; flex-direction: column; justify-content: center; }
+    .blog-teaser-content .section-label { color: var(--madera-claro); margin-bottom: 0.6rem; }
+    .blog-teaser-content .section-title { color: var(--crema); font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1rem; }
+    .blog-teaser-content p { color: rgba(245,240,232,0.75); font-weight: 300; margin-bottom: 1.6rem; line-height: 1.7; font-size: 1rem; }
     .blog-teaser-content .btn-primary { align-self: flex-start; }
     .section-label { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--madera); font-weight: 700; margin-bottom: 1rem; }
     .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.2; margin-bottom: 1.5rem; color: var(--negro); }
@@ -192,7 +193,7 @@
     .ig-inner p { color: rgba(245,240,232,0.7); font-weight: 300; margin-bottom: 2.5rem; }
     .ig-qr { width: 160px; height: 160px; margin: 0 auto 2rem; border: 4px solid var(--madera); padding: 8px; background: white; }
     .ig-qr img { width: 100%; height: 100%; object-fit: cover; }
-    .btn-ig { display: inline-flex; align-items: center; gap: 0.7rem; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; padding: 1rem 2.2rem; text-decoration: none; font-size: 0.95rem; font-weight: 700; border-radius: 4px; transition: all 0.3s; letter-spacing: 0.05em; }
+    .btn-ig { display: inline-flex; align-items: center; gap: 0.7rem; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; padding: 1rem 2.2rem; text-decoration: none; font-size: 0.95rem; font-weight: 600; border-radius: 999px; transition: all 0.3s; letter-spacing: 0.01em; }
     .btn-ig:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(220,39,67,0.4); }
 
     /* CONTACTO */
@@ -200,7 +201,7 @@
     .contacto-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
     .btn-form { display: inline-flex; align-items: center; gap: 0.7rem; background: var(--madera); color: white; padding: 1.1rem 2.2rem; text-decoration: none; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.05em; transition: all 0.3s; }
     .btn-form:hover { background: var(--madera-claro); transform: translateY(-2px); }
-    .btn-wsp { display: inline-flex; align-items: center; gap: 0.7rem; background: #25D366; color: white; padding: 1.1rem 2.2rem; text-decoration: none; font-size: 0.9rem; font-weight: 700; border-radius: 4px; transition: all 0.3s; }
+    .btn-wsp { display: inline-flex; align-items: center; gap: 0.7rem; background: #25D366; color: white; padding: 1.1rem 2.2rem; text-decoration: none; font-size: 0.9rem; font-weight: 600; border-radius: 999px; transition: all 0.3s; }
     .btn-wsp:hover { background: #1ebe5d; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37,211,102,0.3); }
     .contacto-divider { margin: 2rem 0; color: var(--gris); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
 
@@ -577,6 +578,19 @@
     </div>
   </section>
 
+  <!-- BLOG TEASER -->
+  <section class="section-blog-teaser">
+    <div class="blog-teaser-grid">
+      <img src="blog-foto-obra.jpg" alt="Obra en construcción, Constructora Waldorf" class="blog-teaser-img">
+      <div class="blog-teaser-content">
+        <p class="section-label">Blog</p>
+        <h2 class="section-title">Aprende antes de construir</h2>
+        <p>Costos, fundaciones, aislación y financiamiento: guías reales escritas desde nuestra experiencia construyendo en el sur de Chile.</p>
+        <a href="blog.html" class="btn-primary">📖 Visitar el blog</a>
+      </div>
+    </div>
+  </section>
+
   <!-- PRIVACIDAD -->
   <div class="privacidad" id="privacidad">
     <div class="privacidad-inner">
@@ -597,19 +611,6 @@
       <p style="margin-top:1.5rem;font-size:0.8rem;">Última actualización: Abril 2026.</p>
     </div>
   </div>
-
-  <!-- BLOG TEASER -->
-  <section class="section-blog-teaser">
-    <div class="blog-teaser-grid">
-      <img src="casa-los-notros-fachada.jpg" alt="Casa Los Notros, Constructora Waldorf" class="blog-teaser-img">
-      <div class="blog-teaser-content">
-        <p class="section-label">Blog</p>
-        <h2 class="section-title">Aprende antes de construir</h2>
-        <p>Costos, fundaciones, aislación y financiamiento: guías reales escritas desde nuestra experiencia construyendo en el sur de Chile.</p>
-        <a href="blog.html" class="btn-primary">📖 Visitar el blog</a>
-      </div>
-    </div>
-  </section>
 
   <!-- FOOTER -->
   <footer>
