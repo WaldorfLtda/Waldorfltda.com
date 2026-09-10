@@ -212,6 +212,11 @@
     .btn-wsp { display: inline-flex; align-items: center; gap: 0.7rem; background: #25D366; color: white; padding: 1.1rem 2.2rem; text-decoration: none; font-size: 0.9rem; font-weight: 600; border-radius: 999px; transition: all 0.3s; }
     .btn-wsp:hover { background: #1ebe5d; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37,211,102,0.3); }
     .contacto-divider { margin: 2rem 0; color: var(--gris); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .contacto-personal-label { margin-top: 2.2rem; color: var(--gris); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .contacto-personal { display: flex; gap: 0.7rem; justify-content: center; flex-wrap: wrap; margin-top: 0.8rem; }
+    .btn-wsp-mini { display: inline-flex; align-items: center; gap: 0.4rem; background: transparent; border: 1px solid #ddd; color: var(--gris); padding: 0.5rem 1rem; text-decoration: none; font-size: 0.78rem; font-weight: 600; border-radius: 999px; transition: all 0.25s; }
+    .btn-wsp-mini svg { width: 13px; height: 13px; }
+    .btn-wsp-mini:hover { border-color: #25D366; color: #25D366; }
 
     /* PRIVACIDAD */
     .privacidad { background: #EDEAE0; padding: 5rem 2.5rem; }
@@ -725,11 +730,17 @@ src="https://www.facebook.com/tr?id=1104246762063749&ev=PageView&noscript=1"
     </div>
     <div class="contacto-divider reveal">o escríbenos directamente</div>
     <div class="contacto-btns reveal">
-      <a href="https://wa.me/56988315210?text=Hola%2C%20me%20interesa%20cotizar%20un%20proyecto%20con%20Constructora%20Waldorf" class="btn-wsp" target="_blank">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.445h.006c6.585 0 11.946-5.336 11.949-11.896.002-3.176-1.24-6.165-3.48-8.448z"/></svg> Juan Pablo Ayala
+      <a href="https://wa.me/56997974978?text=Hola%2C%20me%20interesa%20cotizar%20un%20proyecto%20con%20Constructora%20Waldorf" class="btn-wsp" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.445h.006c6.585 0 11.946-5.336 11.949-11.896.002-3.176-1.24-6.165-3.48-8.448z"/></svg> Ventas
       </a>
-      <a href="https://wa.me/56987775298?text=Hola%2C%20me%20interesa%20cotizar%20un%20proyecto%20con%20Constructora%20Waldorf" class="btn-wsp" target="_blank">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.445h.006c6.585 0 11.946-5.336 11.949-11.896.002-3.176-1.24-6.165-3.48-8.448z"/></svg> Juan Pablo Vera
+    </div>
+    <p class="contacto-personal-label reveal">O directamente con</p>
+    <div class="contacto-personal reveal">
+      <a href="https://wa.me/56988315210?text=Hola%2C%20me%20interesa%20cotizar%20un%20proyecto%20con%20Constructora%20Waldorf" class="btn-wsp-mini" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.445h.006c6.585 0 11.946-5.336 11.949-11.896.002-3.176-1.24-6.165-3.48-8.448z"/></svg> Juan Pablo Ayala
+      </a>
+      <a href="https://wa.me/56987775298?text=Hola%2C%20me%20interesa%20cotizar%20un%20proyecto%20con%20Constructora%20Waldorf" class="btn-wsp-mini" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.445h.006c6.585 0 11.946-5.336 11.949-11.896.002-3.176-1.24-6.165-3.48-8.448z"/></svg> Juan Pablo Vera
       </a>
     </div>
   </section>
@@ -890,6 +901,7 @@ src="https://www.facebook.com/tr?id=1104246762063749&ev=PageView&noscript=1"
 
 <script src="protect.js"></script>
 <script src="indicadores.js"></script>
+<script src="wsp-float.js"></script>
 <script>
   // Page switching
   function showGallery() {
