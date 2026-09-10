@@ -26,10 +26,10 @@
     /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 0.9rem 2rem; display: flex; justify-content: space-between; align-items: center;
+      padding: 0.5rem 2rem; display: flex; justify-content: space-between; align-items: center;
       background: rgba(15,15,15,0.92); backdrop-filter: blur(10px);
     }
-    .nav-logo { text-decoration: none; } .nav-logo img { height: 42px; width: auto; }
+    .nav-logo { text-decoration: none; } .nav-logo img { height: 70px; width: auto; }
     .nav-left { display: flex; align-items: center; gap: 1rem; }
     .nav-indicators { display: flex; align-items: center; gap: 0.7rem; font-size: 0.72rem; color: rgba(245,240,232,0.45); white-space: nowrap; border-left: 1px solid rgba(245,240,232,0.2); padding-left: 1rem; margin-left: 0.2rem; }
     .nav-indicators b { color: #fff; font-weight: 700; }
@@ -48,6 +48,7 @@
     @media(max-width: 640px) {
       nav { padding: 0.7rem 0.9rem; }
       .nav-logo span { font-size: 0.78rem !important; }
+      .nav-logo img { height: 32px; }
       .nav-left { gap: 0.5rem; }
       .nav-indicators { font-size: 0.6rem; gap: 0.4rem; }
       .nav-right { gap: 0.6rem; }
@@ -63,7 +64,7 @@
     }
 
     /* HERO */
-    .hero { min-height: 100vh; position: relative; display: flex; align-items: flex-end; padding-bottom: 6rem; }
+    .hero { min-height: 100vh; position: relative; display: flex; align-items: flex-end; padding-top: 140px; padding-bottom: 6rem; }
     .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: brightness(0.55); }
     .hero-content { position: relative; z-index: 2; padding: 0 2.5rem; max-width: 700px; }
     .hero-tag { display: inline-block; background: var(--madera); color: var(--crema); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.4rem 1rem; margin-bottom: 1.5rem; font-weight: 700; }
@@ -228,7 +229,7 @@
 
     /* FOOTER */
     footer { background: #080808; padding: 3rem 2.5rem; text-align: center; }
-    .footer-logo img { height: 45px; width: auto; margin-bottom: 1rem; }
+    .footer-logo img { height: 135px; width: auto; margin-bottom: 1rem; }
     .footer-divider { width: 40px; height: 2px; background: var(--madera); margin: 1rem auto; }
     .footer-text { font-size: 0.85rem; color: rgba(245,240,232,0.35); letter-spacing: 0.05em; }
     .footer-ig { display: inline-flex; align-items: center; gap: 0.5rem; color: rgba(245,240,232,0.5); text-decoration: none; font-size: 0.85rem; transition: color 0.3s; }
@@ -289,7 +290,7 @@ src="https://www.facebook.com/tr?id=1104246762063749&ev=PageView&noscript=1"
 <nav>
   <div class="nav-left">
     <a href="#inicio" class="nav-logo" onclick="showMain()" style="text-decoration:none">
-      <span style="font-family:Playfair Display,serif;font-size:1.1rem;color:var(--crema);letter-spacing:0.08em;">CONSTRUCTORA <span style="color:var(--madera-claro)">WALDORF</span></span>
+      <img src="logo-waldorf-blanco.png" alt="Constructora Waldorf">
     </a>
     <span class="nav-indicators"><span id="nav-date">--</span> <span>UF <b id="uf-value">--</b></span><span>USD <b id="usd-value">--</b></span></span>
   </div>
@@ -782,7 +783,7 @@ src="https://www.facebook.com/tr?id=1104246762063749&ev=PageView&noscript=1"
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">
-      <span style="font-family:Playfair Display,serif;font-size:1.1rem;color:var(--crema);letter-spacing:0.08em;">CONSTRUCTORA <span style="color:var(--madera-claro)">WALDORF</span></span>
+      <img src="logo-waldorf-blanco.png" alt="Constructora Waldorf">
     </div>
     <div class="footer-divider"></div>
     <p class="footer-text">Constructora Waldorf · Diseño y Construcción de Viviendas Personalizadas · Sur de Chile</p>
@@ -800,7 +801,7 @@ src="https://www.facebook.com/tr?id=1104246762063749&ev=PageView&noscript=1"
   <nav>
     <div class="nav-left">
       <a href="#" class="nav-logo" onclick="showMain(); return false;" style="text-decoration:none">
-        <span style="font-family:Playfair Display,serif;font-size:1.1rem;color:var(--crema);letter-spacing:0.08em;">CONSTRUCTORA <span style="color:var(--madera-claro)">WALDORF</span></span>
+        <img src="logo-waldorf-blanco.png" alt="Constructora Waldorf">
       </a>
       <span class="nav-indicators"><span id="nav-date-2">--</span> <span>UF <b id="uf-value-2">--</b></span><span>USD <b id="usd-value-2">--</b></span></span>
     </div>
@@ -888,7 +889,7 @@ src="https://www.facebook.com/tr?id=1104246762063749&ev=PageView&noscript=1"
   </div>
   <footer>
     <div class="footer-logo">
-      <span style="font-family:Playfair Display,serif;font-size:1.1rem;color:var(--crema);letter-spacing:0.08em;">CONSTRUCTORA <span style="color:var(--madera-claro)">WALDORF</span></span>
+      <img src="logo-waldorf-blanco.png" alt="Constructora Waldorf">
     </div>
     <div class="footer-divider"></div>
     <p class="footer-text">Constructora Waldorf · waldorfltda.com</p>
