@@ -900,6 +900,127 @@ src="https://www.facebook.com/tr?id=1104246762063749&ev=PageView&noscript=1"
   </footer>
 </div>
 
+<!-- AVISO ASESORIA -->
+<style>
+  @property --avg { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+  .av-fondo { position: fixed; inset: 0; z-index: 10000; display: flex; align-items: center; justify-content: center; padding: 16px; background: rgba(0,0,0,0.55); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); opacity: 0; visibility: hidden; transition: opacity 0.5s ease, visibility 0.5s; }
+  .av-fondo.activo { opacity: 1; visibility: visible; }
+  .av { position: relative; width: 400px; max-width: 100%; max-height: calc(100vh - 32px); overflow-y: auto; color: #fff; border-radius: 24px; padding: 2px; background: conic-gradient(from var(--avg), #ff6a3d, #ffc94d, #ff3d7f, #ff6a3d); animation: avGira 4s linear infinite; box-shadow: 0 30px 80px rgba(255,106,61,0.35), 0 20px 50px rgba(0,0,0,0.5); transform: translateY(60px) scale(0.9); transition: transform 0.7s cubic-bezier(.2,1.3,.4,1); font-family: 'Lato', sans-serif; }
+  @keyframes avGira { to { --avg: 360deg; } }
+  .av-in { background: #12100e; border-radius: 22px; overflow: hidden; }
+  .av-fondo.activo .av { transform: translateY(0) scale(1); }
+  .av-foto { position: relative; height: 190px; overflow: hidden; }
+  .av-foto-img { position: absolute; inset: 0; background: url('casa-maihuen-interior-aviso.jpg') center 52% / cover no-repeat; animation: avZoom 14s ease-in-out infinite alternate; }
+  @keyframes avZoom { from { transform: scale(1); } to { transform: scale(1.15); } }
+  .av-foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18,16,14,0) 35%, #12100e 100%); }
+  .av-sticker { position: absolute; right: 18px; bottom: 6px; z-index: 2; width: 86px; height: 86px; border-radius: 50%; background: linear-gradient(135deg, #ff6a3d, #ffc94d); color: #1a0f05; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-weight: 900; line-height: 1; transform: rotate(-12deg); box-shadow: 0 8px 22px rgba(255,106,61,0.55); animation: avSticker 2.6s ease-in-out infinite; }
+  .av-sticker small { font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase; }
+  .av-sticker strong { font-size: 1.15rem; letter-spacing: 0.5px; margin-top: 3px; }
+  @keyframes avSticker { 0%,100% { transform: rotate(-12deg) scale(1); } 50% { transform: rotate(-8deg) scale(1.07); } }
+  .av-pill { position: absolute; top: 14px; left: 14px; z-index: 1; display: inline-flex; align-items: center; gap: 7px; background: rgba(20,18,16,0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); padding: 6px 12px; border-radius: 999px; font-size: 0.74rem; letter-spacing: 0.5px; color: var(--crema); }
+  .av-punto { width: 8px; height: 8px; border-radius: 50%; background: #ff6a3d; box-shadow: 0 0 0 0 rgba(255,106,61,0.8); animation: avLatido 1.6s infinite; }
+  @keyframes avLatido { 0% { box-shadow: 0 0 0 0 rgba(255,106,61,0.8); } 70% { box-shadow: 0 0 0 10px rgba(255,106,61,0); } 100% { box-shadow: 0 0 0 0 rgba(255,106,61,0); } }
+  .av-cerrar { position: absolute; top: 12px; right: 12px; z-index: 2; width: 32px; height: 32px; border-radius: 50%; border: none; background: rgba(20,18,16,0.6); backdrop-filter: blur(8px); color: var(--crema); font-size: 1.25rem; line-height: 1; cursor: pointer; transition: background 0.2s; }
+  .av-cerrar:hover { background: rgba(20,18,16,0.9); }
+  .av-cuerpo { padding: 2px 24px 22px; margin-top: -18px; position: relative; z-index: 1; }
+  .av-sello { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; background: linear-gradient(90deg, #ff6a3d, #ffc94d); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .av h2 { font-family: 'Playfair Display', serif; font-size: 1.75rem; line-height: 1.15; margin-bottom: 8px; color: #fff; }
+  .av h2 em { font-style: italic; background: linear-gradient(90deg, #ff6a3d, #ffc94d); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .av p { font-size: 0.93rem; line-height: 1.55; color: rgba(255,255,255,0.72); margin-bottom: 16px; }
+  .av-opciones { display: flex; flex-direction: column; gap: 9px; }
+  .av-op { display: flex; align-items: center; gap: 12px; width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #fff; font-family: inherit; font-size: 0.97rem; font-weight: 700; text-align: left; padding: 12px 14px; border-radius: 16px; cursor: pointer; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
+  .av-op:hover { border-color: #ff8a3d; background: rgba(255,106,61,0.14); transform: translateX(4px); }
+  .av-op i { font-style: normal; font-size: 1.25rem; width: 38px; height: 38px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: rgba(255,138,61,0.16); }
+  .av-op i svg { width: 20px; height: 20px; fill: none; stroke: #ff8a3d; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .av-op span { margin-left: auto; color: #ff8a3d; font-size: 1.15rem; }
+  .av-paso2 { display: none; animation: avEntra 0.45s ease; }
+  .av-fondo.paso2 .av-paso1 { display: none; }
+  .av-fondo.paso2 .av-paso2 { display: block; }
+  @keyframes avEntra { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: none; } }
+  .av-btn { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; gap: 9px; background: linear-gradient(90deg, #ff6a3d, #ff9a3d); color: #fff; text-decoration: none; font-weight: 900; font-size: 1.02rem; padding: 15px 18px; border-radius: 999px; box-shadow: 0 10px 26px rgba(255,106,61,0.45); transition: transform 0.2s, box-shadow 0.2s; }
+  .av-btn::after { content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent); transform: skewX(-20deg); animation: avBrillo 2.8s ease-in-out infinite; }
+  @keyframes avBrillo { 0%,55% { left: -60%; } 100% { left: 130%; } }
+  .av-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(255,106,61,0.6); }
+  .av-btn svg { width: 20px; height: 20px; fill: currentColor; }
+  .av-link { display: block; text-align: center; margin-top: 12px; color: rgba(255,255,255,0.6); font-size: 0.86rem; text-decoration: underline; }
+  .av-link:hover { color: #ff9a3d; }
+  .av-prueba span { display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1.3; }
+  .av-prueba { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.78rem; color: rgba(255,255,255,0.55); }
+  .av-prueba b { color: #ff9a3d; font-weight: 900; font-size: 1.15rem; }
+  @media (max-width: 600px) {
+    .av-foto { height: 140px; }
+    .av-sticker { width: 74px; height: 74px; }
+    .av-sticker strong { font-size: 1rem; }
+    .av h2 { font-size: 1.55rem; }
+    .av-cuerpo { padding: 2px 20px 20px; }
+  }
+</style>
+<div class="av-fondo" id="aviso-asesoria">
+<div class="av" role="dialog" aria-modal="true" aria-labelledby="av-titulo">
+ <div class="av-in">
+  <div class="av-foto">
+    <div class="av-foto-img"></div>
+    <div class="av-pill"><span class="av-punto"></span>Asesoría por videollamada</div>
+    <button class="av-cerrar" type="button" aria-label="Cerrar">&times;</button>
+    <div class="av-sticker"><small>Asesoría</small><strong>GRATIS</strong></div>
+  </div>
+  <div class="av-cuerpo">
+    <span class="av-sello">Sin compromiso y sin costo</span>
+    <div class="av-paso1">
+      <h2 id="av-titulo">¿Ya tienes <em>terreno?</em></h2>
+      <p>Cuéntanos en qué etapa estás y te orientamos en costos, plazos y primeros pasos.</p>
+      <div class="av-opciones">
+        <button class="av-op" type="button" data-r="tengo"><i><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg></i>Sí, ya tengo terreno <span>&rarr;</span></button>
+        <button class="av-op" type="button" data-r="busco"><i><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></i>Lo estoy buscando <span>&rarr;</span></button>
+        <button class="av-op" type="button" data-r="idea"><i><svg viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></i>Solo estoy explorando ideas <span>&rarr;</span></button>
+      </div>
+    </div>
+    <div class="av-paso2">
+      <h2 id="av-titulo2">Conversemos tu proyecto</h2>
+      <p id="av-texto2"></p>
+      <a class="av-btn" id="av-wsp" href="https://wa.me/56997974978" target="_blank"><svg viewBox="0 0 24 24"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.445h.006c6.585 0 11.946-5.336 11.949-11.896.002-3.176-1.24-6.165-3.48-8.448z"/></svg>Agendar videollamada</a>
+      <a class="av-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdFWxeckGoZOZAJ41CSpP3902GEZNZPkzFKGf_v0m018IUDnA/viewform?usp=preview" target="_blank" onclick="if(window.fbq)fbq('track','Lead');">Prefiero completar el formulario</a>
+    </div>
+    <div class="av-prueba"><span><b>+22</b> proyectos terminados</span><span><b>+6</b> años construyendo</span><span><b>+3.000</b> m² construidos</span></div>
+  </div>
+ </div>
+</div>
+</div>
+<script>
+  (function () {
+    var av = document.getElementById('aviso-asesoria');
+    var visto = false;
+    try { visto = sessionStorage.getItem('avisoAsesoria') === '1'; } catch (e) {}
+    if (visto) return;
+    var textos = {
+      tengo: ['Partamos por tu terreno', 'Agenda una videollamada de 20 minutos. Revisamos tu terreno, lo que necesitas y tu presupuesto.', 'ya tengo terreno'],
+      busco: ['Te acompañamos desde el inicio', 'Agenda una videollamada de 20 minutos. Te contamos qué mirar en un terreno antes de comprar y cuánto costaría construir.', 'estoy buscando terreno'],
+      idea: ['Ideas claras desde el día uno', 'Agenda una videollamada de 20 minutos. Revisamos nuestros modelos y te damos una idea real de costos y plazos.', 'estoy explorando ideas']
+    };
+    function cerrar() {
+      av.classList.remove('activo');
+      try { sessionStorage.setItem('avisoAsesoria', '1'); } catch (e) {}
+    }
+    av.querySelector('.av-cerrar').addEventListener('click', cerrar);
+    av.addEventListener('click', function (e) { if (e.target === av) cerrar(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') cerrar(); });
+    av.querySelectorAll('.av-op').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var t = textos[b.getAttribute('data-r')];
+        document.getElementById('av-titulo2').textContent = t[0];
+        document.getElementById('av-texto2').textContent = t[1];
+        document.getElementById('av-wsp').href = 'https://wa.me/56997974978?text=' + encodeURIComponent('Hola, quiero agendar una asesoría por videollamada con Constructora Waldorf. Te cuento que ' + t[2] + '.');
+        av.classList.add('paso2');
+      });
+    });
+    av.querySelectorAll('.av-paso2 a').forEach(function (a) { a.addEventListener('click', cerrar); });
+    setTimeout(function () {
+      av.classList.add('activo');
+      try { sessionStorage.setItem('avisoAsesoria', '1'); } catch (e) {}
+    }, 2500);
+  })();
+</script>
+
 <script src="protect.js"></script>
 <script src="indicadores.js"></script>
 <script src="wsp-float.js"></script>
