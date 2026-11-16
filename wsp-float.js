@@ -18,6 +18,12 @@
   a.setAttribute('aria-label', 'Escríbenos por WhatsApp');
   a.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.445h.006c6.585 0 11.946-5.336 11.949-11.896.002-3.176-1.24-6.165-3.48-8.448z"/></svg>';
 
+  // Registra en Meta como "Lead" cada clic a WhatsApp, en cualquier botón del sitio
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest ? e.target.closest('a[href*="wa.me/"]') : null;
+    if (link && window.fbq) fbq('track', 'Lead', { content_name: 'WhatsApp' });
+  });
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
       document.body.appendChild(a);
